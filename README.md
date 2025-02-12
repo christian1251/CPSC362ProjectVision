@@ -24,6 +24,12 @@ For customers seeking a online footwear marketplace who are looking for Sky Walk
 - Description: User can create an account to keep track of shopping cart
 5. Choose Delivery or Pickup
 - Description: User can click on pickup or delivery.
+6. Login
+- User can access created account
+7. User Profile
+- Contains all user data
+8. Checkout
+- User can checkout 
 
 
 ---
@@ -46,7 +52,7 @@ For customers seeking a online footwear marketplace who are looking for Sky Walk
 
 
 
-
+![Flowdiagram]()
 
 
 
