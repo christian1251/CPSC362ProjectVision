@@ -15,44 +15,51 @@ For customers seeking a online footwear marketplace who are looking for Sky Walk
 ---
 ## Functional Requirements 
 1. Search Inventory
-- Description: User can search the shoes in stock in search bar
+-  Description: User can search the shoes in stock from the main Homepage
+
 2. Add to Shopping Cart
-- Description: User can click on shoes and add them to cart
+-  Description: User can add items to shopping cart from Homepage, Search, Filter pages
+
 3. Apply Filters
-- Description: User can apply filters to differentiate prices, color, size, etc
+-  Description: User can apply filters after searching to categorize prices, color, size, etc
+
 4. Create User Account
-- Description: User can create an account to keep track of shopping cart
+-  Description: From the homepage, user can create an account
+
 5. Choose Delivery or Pickup
-- Description: User can click on pickup or delivery.
-6. Login
-- User can access created account
+-  Description: User can decide on pickup or delivery once cart is complete
+
+6. Login 
+-  Description: From the homepage, user can login in to created an account
+
 7. User Profile
-- Contains all user data
+-  Description: Contains all user data
+
 8. Checkout
-- User can checkout 
+-  Description: User can complete a purchase after choosing Delivery or Pickup
+
+9. Homepage
+-  Description: www.Skywalkers.com leads to homepage
 
 
 ---
 ## Non-Functional Requirements 
 
-1. Performance
+1. Site Performance
 - Description: Allow for thousands of users to access site
-
-2. Scalability
+2. Increase Scalability
 - Description:  Increase amount of users handled during events like black friday
-3. Availability
+3. Site Availability
 - Description: do not let site fail during events
-
-4. Security
+4. User Security
 - Description: User  authentication
-
 5. External Interface requirements 
 - Description: Make website fluid and clean
 
 
 
 
-![Flowdiagram](Skywalkers_Diagram-3.jpg)
+![Flowdiagram](SkywalkersDiagram.jpg)
 
 
 
