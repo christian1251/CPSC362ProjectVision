@@ -1,3 +1,8 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import Listing from './listing.svelte';
+  </script>
+  
+  <h1>This is the homepage</h1>
+  
+  <form>Enter a product to search: </form>
+  <Listing />
