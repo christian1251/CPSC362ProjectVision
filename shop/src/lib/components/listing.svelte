@@ -1,12 +1,16 @@
+<script>
+
+	import { listings } from '$lib/stores/ListingsStore.js';
+
+</script>
+
+
+{#each $listings as item}
 <div class="listing-box">
     <h1>This is an example of a listing, FEATURES to implement:</h1>
-    <ul>
-      <li>ADMIN feature: add, remove, update & delete listings</li>
-      <li>Identifiers such as name, price, size, etc</li>
-      <li>Button to add to cart</li>
-      <li>Maybe like buttons to choose size and colorway</li>
-    </ul>
-  </div>
+      <li>Identifiers such as {item.id} , {item.price}, {item.price}, etc</li>
+    </div>
+  {/each}
   
   <style>
     .listing-box {

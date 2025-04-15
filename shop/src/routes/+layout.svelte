@@ -10,6 +10,7 @@
 <nav>
 	<a class="link" href="/">Home</a>
 	<a class="link" href="/cart"> Cart</a>
+	<a class="link" href="/admin"> Admin</a>
 </nav>
 
 <style>
