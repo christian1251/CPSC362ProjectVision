@@ -1,5 +1,5 @@
 <script>
-    import Listing from './listing.svelte';
+    import Listing from '../lib/components/listing.svelte';
   </script>
   
   <h1>This is the homepage</h1>
