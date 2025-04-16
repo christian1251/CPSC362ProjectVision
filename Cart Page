@@ -1,4 +1,3 @@
-<!-- src/routes/cart/+page.svelte -->
 <script lang="ts">
 	import { cart } from '$lib/stores/Cartstores.js';
 	
