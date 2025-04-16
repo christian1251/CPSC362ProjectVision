@@ -3,6 +3,9 @@
 	import { listings } from '$lib/stores/ListingsStore.js';
   import { cart } from '$lib/stores/Cartstores.js'
 
+  /**
+	 * @param {{ id: any; name: any; price: any; size: any; color: any; }} item
+	 */
   function addToCart(item) {
     cart.update(l => [...l, {
         id: item.id,
@@ -26,13 +29,19 @@
   <style>
     .listing-box {
       border: 2px outset black;
+      border-color: aqua;
       padding: 1rem;
       margin: 1rem;
       background-color: blanchedalmond;
     }
   
-    ul {
-      margin-top: 0.5rem;
+ 
+    button {
+      cursor: pointer;
+      border: 2px outset black ;
+      border-color: blue;
+      margin: 1rem;
+      background-color: cadetblue;
     }
   
     li {

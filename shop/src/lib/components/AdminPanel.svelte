@@ -68,3 +68,10 @@
       </li>
     {/each}
   </ul>
+
+
+  <style>
+    button {
+      cursor: pointer;
+    }
+  </style>
