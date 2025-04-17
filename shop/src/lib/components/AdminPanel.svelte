@@ -9,15 +9,12 @@
 
   // Add new listing
   function addListing() {
-    listings.update(l => [...l, {
-		...product, id: Date.now(),
-		name: '',
-		price: 0,
-		size: '',
-		color: ''
-	}]);
-    resetProduct();
-  }
+  listings.update(l => [...l, {
+    ...product,
+    id: Date.now() 
+  }]);
+  resetProduct();
+}
 
   // Remove listing by ID
   function removeListing(id: number) {

@@ -9,5 +9,9 @@ import { writable } from 'svelte/store';
  * @property {string} color
  */
 
-/** @type {import('svelte/store').Writable<Product[]>} */
+/**
+ * @typedef {Product & { quantity: number }} CartItem
+ */
+
+/** @type {import('svelte/store').Writable<CartItem[]>} */
 export const cart = writable([]);

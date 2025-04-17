@@ -1,6 +1,6 @@
 <script lang="ts">
   import { listings } from '$lib/stores/ListingsStore.js';
-  import { cart } from '$lib/stores/Cartstores.js';
+  import { cart, type CartItem } from '$lib/stores/Cartstores.js';
 
   type Product = {
     id: number;
@@ -14,8 +14,17 @@
 
   // Add a product to the cart
   function addToCart(item: Product) {
-    cart.update(c => [...c, { ...item }]); // Simple spread keeps everything clean
-  }
+  cart.update(c => {
+    const index = c.findIndex(p => p.id === item.id);
+    if (index !== -1) {
+      const updated = [...c];
+      updated[index].quantity += 1;
+      return updated;
+    } else {
+      return [...c, { ...item, quantity: 1 }]; // ✅ Add quantity
+    }
+  });
+}
 
   // Filter listings based on search input (reactive)
   $: filteredListings = $listings.filter(item =>
