@@ -167,6 +167,7 @@
 							src={product.image}
 							alt={product.name}
 							class="w-full h-full object-cover"
+							onerror="this.src='/images/placeholder.jpg'"
 						/>
 						<div class="absolute top-2 right-2 bg-sky-600 text-white px-2 py-1 rounded text-sm">
 							{product.category}
