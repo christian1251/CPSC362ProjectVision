@@ -66,5 +66,8 @@
 	},
 	"keywords": [
 		"svelte"
-	]
+	],
+	"dependencies": {
+		"firebase": "^11.6.0"
+	}
 }

@@ -1,3 +1,4 @@
+// Stores items in cart
 import { writable } from 'svelte/store';
 
 /**
