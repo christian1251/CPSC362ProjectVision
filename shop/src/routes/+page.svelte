@@ -5,7 +5,7 @@
   
   <div class="home-wrapper">
     <h1>Welcome to the Shop</h1>
-    <p class="subheading">Browse our current listings below 👇</p>
+    <p class="subheading">Browse our current listings below </p>
   </div>
     
   

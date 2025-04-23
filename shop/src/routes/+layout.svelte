@@ -10,6 +10,8 @@
 		<a class="link" href="/"> Home</a>
 		<a class="link" href="/cart"> Cart</a>
 		<a class="link" href="/admin"> Admin</a>
+		<a class="link" href="/login"> Login</a>
+		<a class="link" href="/signup"> Sign up</a>
 	</nav>
 </header>
 
