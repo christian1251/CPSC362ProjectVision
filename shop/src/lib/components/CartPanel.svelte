@@ -46,7 +46,7 @@
 
 <p><strong>Total:</strong> ${total.toFixed(2)}</p>
 
-<button on:click={() => alert('Checkout placeholder')}>Checkout</button>
+<button><a href="/checkout">Checkout</a></button>
 <button on:click={clearCart}> Clear Cart</button>
 
 <style>
