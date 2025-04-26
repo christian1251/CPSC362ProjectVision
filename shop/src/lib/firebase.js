@@ -6,7 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCBkiEVmLJlppTSjsum0yb9VYs2aJ6RPQY",
   authDomain: "project-e4264.firebaseapp.com",
   projectId: "project-e4264",
-  appId: "YOUR_APP_ID"
+  appId: "1:713096037610:web:ca531c260018a76e028393"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -5,7 +5,7 @@
 </script>
 
 <header class="top-bar">
-	<h1 class="brand">shopppp</h1>
+	<h1 class="brand"><a href="/">shopppp</a></h1>
 	<nav>
 		<a class="link" href="/"> Home</a>
 		<a class="link" href="/cart"> Cart</a>

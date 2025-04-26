@@ -8,7 +8,7 @@
   
     // find that order in the store
     const order = derived([orders, orderId], ([$orders, $id]) =>
-      $orders.find(o => o.id === $id)
+      $orders.find((o: { id: any; }) => o.id === $id)
     );
   </script>
   
