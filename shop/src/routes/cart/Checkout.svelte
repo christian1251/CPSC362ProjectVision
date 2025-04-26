@@ -1,3 +1,6 @@
+<!-- 
+ OLD CODE
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { cart } from '$lib/stores/Cartstores.js';
@@ -127,4 +130,4 @@
 		<h1 class="text-3xl font-bold mb-8">Checkout</h1>
 		
 		
-		
+		 -->
