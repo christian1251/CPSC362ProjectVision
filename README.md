@@ -1,7 +1,7 @@
-# CPSC362 Project Vision Group 9
-CPSC362 Group Activity 1 
+# CPSC362 Project Documentation
 
-
+# Video
+## 
 
 --- 
 ##  Fashion Website
@@ -11,6 +11,21 @@ Title: StyleSpot
 ## Project Vision
 
 For customers seeking an online marketplace, looking for StyleSpot branded clothing. The StyleSpot shop is a website that personalizes the user's experience and provides a variety of clothing options. Unlike other products, our site is aggressively priced.
+
+---
+## How to Run Application
+These were the versions used to build the application:
+ * `npm: 11.3.0`
+ * `node: 20.17.0`
+
+
+Run `npm install` locally in the /shop folder.
+
+
+Use the following command to local host the code:
+
+
+`npm run dev -- --open`
 
 ---
 ## Functional Requirements 
