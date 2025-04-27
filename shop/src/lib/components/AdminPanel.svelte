@@ -8,7 +8,8 @@
 		price: 0,
 		size: '',
 		color: '',
-		image: ''
+		image: '',
+		category: undefined
 	};
 
 	let editing: Product | null = null;
@@ -17,7 +18,7 @@
 	const PLACEHOLDER = '/images/placeholder.webp';
 
 	function resetForm() {
-		form = { name: '', price: 0, size: '', color: '', image: '' };
+		form = { name: '', price: 0, size: '', color: '', image: '', category: '' };
 		editing = null;
 	}
 
@@ -36,7 +37,10 @@
 			// add new
 			listings.update(arr => [
 				...arr,
-				{ id: Date.now(), ...form, image: img }
+				{
+					id: Date.now(), ...form, image: img,
+					category: ''
+				}
 			]);
 		}
 		resetForm();
