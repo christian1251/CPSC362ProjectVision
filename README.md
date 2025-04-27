@@ -1,16 +1,31 @@
-# CPSC362 Project Vision Group 9
-CPSC362 Group Activity 1 
+# CPSC362 Project Documentation
 
-
+# Video
+## 
 
 --- 
 ##  Fashion Website
-Title: Sky Walkers 
+Title: StyleSpot
 
 ---
 ## Project Vision
 
-For customers seeking a online footwear marketplace who are looking for Sky Walkers branded shoes. The Sky Walkers shop is a website that personalizes the users experience and provides filtered shoes. Unlike other products, our site is agressively priced.
+For customers seeking an online marketplace, looking for StyleSpot branded clothing. The StyleSpot shop is a website that personalizes the user's experience and provides a variety of clothing options. Unlike other products, our site is aggressively priced.
+
+---
+## How to Run Application
+These were the versions used to build the application:
+ * `npm: 11.3.0`
+ * `node: 20.17.0`
+
+
+Run `npm install` locally in the /shop folder.
+
+
+Use the following command to local host the code:
+
+
+`npm run dev -- --open`
 
 ---
 ## Functional Requirements 
@@ -20,27 +35,26 @@ For customers seeking a online footwear marketplace who are looking for Sky Walk
 2. Add to Shopping Cart
 -  Description: User can add items to shopping cart from Homepage, Search, Filter pages
 
-3. Apply Filters
--  Description: User can apply filters after searching to categorize prices, color, size, etc
-
-4. Create User Account
+3. Create User Account
 -  Description: From the homepage, user can create an account
 
-5. Choose Delivery or Pickup
--  Description: User can decide on pickup or delivery once cart is complete
+4. Shipping Method
+-  Description: User can pick desired shipping method
 
-6. Login 
+5. Login 
 -  Description: From the homepage, user can login in to created an account
 
-7. User Profile
--  Description: Contains all user data
-
-8. Checkout
+6. Checkout
 -  Description: User can complete a purchase after choosing Delivery or Pickup
 
-9. Homepage
+7. Homepage
 -  Description: www.Skywalkers.com leads to homepage
 
+8. Order Management
+-  Description: User can view past orders and status of them
+
+9. Admin Access
+- Admin can create, edit, and delete listings
 
 ---
 ## Non-Functional Requirements 
@@ -59,7 +73,8 @@ For customers seeking a online footwear marketplace who are looking for Sky Walk
 
 
 
-![Flowdiagram](SkywalkersDiagram.jpg)
+![Flowdiagram](StylespotUserDiagram.png)
+![Flowdiagram](AdminStyleSpot.png)
 
 
 
