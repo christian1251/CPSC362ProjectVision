@@ -3,16 +3,16 @@ import { writable } from 'svelte/store';
 export const listings = writable([
   {
     id: 1,
-    name: 'Denim Jacket',
+    name: 'Bomber Jacket',
     price: 65,
     size: 'M',
-    color: 'Blue',
+    color: 'Orange',
     category: 'jackets',
     image: '/images/jackets/jacket-1.webp'
   },
   {
     id: 2,
-    name: 'Varsity Jacket',
+    name: 'Rain Jacket',
     price: 80,
     size: 'L',
     color: 'Black',
@@ -21,7 +21,7 @@ export const listings = writable([
   },
   {
     id: 3,
-    name: 'Graphic Tee',
+    name: 'Button Up Shirt',
     price: 25,
     size: 'S',
     color: 'White',
@@ -30,12 +30,48 @@ export const listings = writable([
   },
   {
     id: 4,
-    name: 'Plain Tee',
+    name: 'Plain White Tee',
     price: 20,
     size: 'M',
     color: 'Gray',
     category: 'shirts',
     image: '/images/shirts/shirt-2.webp'
   },
-  /* …pants, sweaters… */
+  {
+    id: 5,
+    name: 'Slim Fit Jeans',
+    price: 45,
+    size: 'M',
+    color: 'Khaki',
+    category: 'pants',
+    image: '/images/pants/pants-1.webp'
+  },
+  {
+    id: 6,
+    name: 'Denim Jeans',
+    price: 50,
+    size: 'L',
+    color: 'Dark Blue',
+    category: 'pants',
+    image: '/images/pants/pants-2.webp'
+  },
+  {
+    id: 7,
+    name: 'Cable Knit Sweater',
+    price: 60,
+    size: 'S',
+    color: 'Cream',
+    category: 'sweaters',
+    image: '/images/sweaters/sweater-1.webp'
+  },
+  {
+    id: 8,
+    name: 'Fleece Pullover',
+    price: 55,
+    size: 'M',
+    color: 'Olive',
+    category: 'sweaters',
+    image: '/images/sweaters/sweater-2.webp'
+  }
+  
 ]);
