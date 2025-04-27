@@ -1,106 +1,100 @@
-<!-- src/routes/+layout.svelte -->
 <script lang="ts">
-	/* ---- imports that were already there ---- */
+	/* ------------ imports already in your version ------------- */
 	import '../app.css';
-	import { user } from '../lib/stores/auth.js';
-	import { auth } from '../lib/firebase.js';
-	import { signOut } from 'firebase/auth';
-	import { cart } from '../lib/stores/Cartstores.js';
-	import { onMount } from 'svelte';
-  
+	import { user }     from '$lib/stores/auth.js';
+	import { auth }     from '$lib/firebase.js';
+	import { signOut }  from 'firebase/auth';
+	import { cart }     from '$lib/stores/Cartstores.js';
+	import { onMount }  from 'svelte';
+
 	let menuOpen = false;
 	let dropdownEl: HTMLDivElement;
-  
-	function toggleMenu() {
-	  menuOpen = !menuOpen;
-	}
-  
-	function handleLogout() {
-	  signOut(auth);
-	  menuOpen = false;
-	}
-  
-	const onClickOutside = (e: MouseEvent) => {
+
+	function toggleMenu()  {	menuOpen = !menuOpen; }
+	function handleLogout() { signOut(auth); menuOpen = false; }
+
+	const onClickOutside = (e:MouseEvent) => {
 		if (menuOpen && dropdownEl && !dropdownEl.contains(e.target as Node)) {
 			menuOpen = false;
 		}
 	};
-  
 	onMount(() => {
 		document.addEventListener('click', onClickOutside);
 		return () => document.removeEventListener('click', onClickOutside);
 	});
-  
-	// Track number of items in cart
-	$: cartCount = $cart.reduce((total, item) => total + item.quantity, 0);
-  </script>
-  
-  <header class="navbar">
+
+	/* cart badge */
+	$: cartCount = $cart.reduce((t,i)=>t+i.quantity, 0);
+</script>
+
+<header class="navbar">
 	<div class="left-nav">
 		<a class="brand" href="/">
-			<!--  put logo.webp (or png) under  static/images/logo.webp  -->
-			<img src="/images/logo.webp" alt="StyleSpot logo" />
+			<!-- put logo.png / logo.webp in  static/images/ -->
+			<img class="logo" src="/images/logo.png" alt="StyleSpot logo" />
 		</a>
 
 		<nav class="main-nav">
 			<a href="/">Home</a>
 			<a href="/admin">Admin</a>
-
-			<!-- Quick category shortcuts -->
 			<a href="/category/jackets">Jackets</a>
 			<a href="/category/shirts">Shirts</a>
 			<a href="/category/pants">Pants</a>
 			<a href="/category/sweaters">Sweaters</a>
 		</nav>
 	</div>
-  
+
 	<div class="icon-nav">
-	  <div class="dropdown" bind:this={dropdownEl}>
-		<button class="icon-link" on:click={toggleMenu} title="Account">
-		  <i class="fa-solid fa-user"></i>
-		</button>
-		{#if menuOpen}
-		  <ul class="dropdown-menu">
-			{#if $user}
-			  <li><button on:click={handleLogout}>Logout</button></li>
-			{:else}
-			  <li><a href="/login">Login</a></li>
-			  <li><a href="/signup">Sign up</a></li>
+		<div class="dropdown" bind:this={dropdownEl}>
+			<button class="icon-link" aria-label="Account" on:click={toggleMenu}>
+				<i class="fa-solid fa-user"></i>
+			</button>
+			{#if menuOpen}
+				<ul class="dropdown-menu">
+					{#if $user}
+						<li><button on:click={handleLogout}>Logout</button></li>
+					{:else}
+						<li><a href="/login">Login</a></li>
+						<li><a href="/signup">Sign up</a></li>
+					{/if}
+				</ul>
 			{/if}
-		  </ul>
-		{/if}
-	  </div>
-  
-	  <div class="cart-wrapper">
-		<a class="icon-link" href="/cart" title="Cart">
-		  <i class="fa-solid fa-shopping-cart"></i>
-		  {#if cartCount > 0}
-			<div class="cart-badge">{cartCount}</div>
-		  {/if}
-		</a>
-	  </div>
+		</div>
+
+		<div class="cart-wrapper">
+			<a class="icon-link" aria-label="Cart" href="/cart">
+				<i class="fa-solid fa-shopping-cart"></i>
+				{#if cartCount > 0}
+					<span class="cart-badge">{cartCount}</span>
+				{/if}
+			</a>
+		</div>
 	</div>
-  </header>
-  
-  <main class="container">
-	<slot />
-  </main>
-  
-  <style>
-	.cart-wrapper {
-	  position: relative;
-	}
-  
-	.cart-badge {
-	  position: absolute;
-	  top: -6px;
-	  right: -6px;
-	  background-color: mediumseagreen;
-	  color: white;
-	  border-radius: 9999px;
-	  padding: 2px 6px;
-	  font-size: 0.7rem;
-	  font-weight: bold;
-	}
-  </style>
-  
+</header>
+
+<main class="container">
+	<slot/>
+</main>
+
+<style>
+/* ------------ NAVBAR / GENERAL rules (unchanged) ------------- */
+/* keep your existing navbar / dropdown / container styles here  */
+
+/* ---------- only the logo & badge tweaks are new ------------- */
+.logo{
+	height:56px;          /* adjust if you want it bigger/smaller   */
+	width:auto;
+	object-fit:contain;
+	/* turn dark logo white so it pops on the green bar            */
+	filter:brightness(0) invert(1);
+}
+
+/* cart badge */
+.cart-wrapper{position:relative;}
+.cart-badge{
+	position:absolute;top:-6px;right:-6px;
+	background:mediumseagreen;color:#fff;
+	border-radius:9999px;padding:2px 6px;
+	font-size:.7rem;font-weight:bold;
+}
+</style>
