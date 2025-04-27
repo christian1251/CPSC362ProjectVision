@@ -1,59 +1,146 @@
 /* Global background */
 body {
-  background-color: #f1f5f9; /* light grey */
+  background-color: #f1f5f9;
   margin: 0;
   font-family: system-ui, sans-serif;
 }
 
-/* 1. Header exactly as your mockup */
+/* Navbar container */
 .navbar {
   background-color: #023020;
-  height: 4.5rem;            /* same height */
-  padding: 0 2rem;           
+  height: 4.5rem;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Brand text on left */
-.brand {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Links on right */
-.nav-links {
+/* Left side: Brand + text nav */
+.left-nav {
   display: flex;
   align-items: center;
+  gap: 2rem; /* space between logo and links */
 }
 
-.nav-links > * {
-  margin-left: 1.5rem;       /* exact spacing */
+.brand a {
+  font-family: 'Charm', cursive;
+  font-size: 2.25rem;
   color: white;
   text-decoration: none;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
   font-size: 1rem;
 }
 
-.nav-links a:hover {
+.main-nav a:hover {
   text-decoration: underline;
 }
 
-/* Logout button style to match links */
-.nav-links button {
+/* Right side: search + icons */
+.icon-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Search form styling */
+.search-form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 1.5rem;
+  width: 180px;
+}
+
+.search-form input {
+  border: none;
+  padding: 0.4rem 0.6rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-form input::placeholder {
+  color: #888;
+}
+
+.search-form button {
   background: none;
   border: none;
-  color: white;
-  font-size: 1rem;
+  padding: 0 0.6rem;
   cursor: pointer;
-  padding: 0;
+  font-size: 1rem;
+  color: #023020;
 }
 
-/* 2. Centered page container */
+.search-form button:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Icon button/link styling */
+.icon-link {
+  color: white;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  opacity: 0.8;
+}
+
+/* Account dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0.25rem 0;
+  min-width: 8rem;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: #023020;
+  text-decoration: none;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: #f1f5f9;
+}
+
+/* Page content container */
 .container {
   max-width: 1200px;
-  margin: 2rem auto;         /* space above & below */
+  margin: 2rem auto;
   padding: 0 1rem;
 }
-
-/* 3. Keep slot’s own styles */
