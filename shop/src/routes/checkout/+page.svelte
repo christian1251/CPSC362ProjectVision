@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { cart } from '$lib/stores/Cartstores.js';
+	import { addOrder } from '$lib/stores/OrdersStore.ts';
+	import { goto } from '$app/navigation';
+
 
 	type Product = {
 		id: number;
@@ -135,10 +138,24 @@
 	}
 
 	function placeOrder() {
-		alert(' Order placed successfully!');
-		cart.set([]); // Clear cart
-		currentStep = 1;
+  		const order = {
+    		id: Date.now().toString(),
+			items: cartItems,
+			subtotal,
+			shipping: shippingCost,
+			tax: taxAmount,
+			total,
+			placedAt: new Date(),
+			shippingInfo: { ...shippingInfo }
+  };
+
+	addOrder(order);   // save to global store
+	cart.set([]);      // clear cart
+
+	// navigate to confirmation page, pass order id as query param
+	goto(`/orders/confirmation?orderId=${order.id}`);
 	}
+
 </script>
 
 {#if currentStep === 1}
