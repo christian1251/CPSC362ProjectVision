@@ -1,7 +1,7 @@
 # CPSC362 Project Documentation
 
 # Video
-## 
+## https://youtu.be/UEX3rmVnNxQ
 
 --- 
 ##  Fashion Website
@@ -26,6 +26,14 @@ Use the following command to local host the code:
 
 
 `npm run dev -- --open`
+---
+## How to run tests and coverage tests
+`npm run test`
+or 
+`npx vitest run --reporter verbose`
+
+`npm run coverage`
+
 
 ---
 ## Functional Requirements 
