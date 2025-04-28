@@ -2,7 +2,6 @@
 	import { listings } from '$lib/stores/ListingsStore.js';
 	import type { Product } from '$lib/types.ts';
 
-	/* ---------- local form state ---------- */
 	let form: Omit<Product, 'id'> = {
 		name: '',
 		price: 0,
@@ -14,7 +13,6 @@
 
 	let editing: Product | null = null;
 
-	/* ---------- helpers ---------- */
 	const PLACEHOLDER = '/images/placeholder.webp';
 
 	function resetForm() {

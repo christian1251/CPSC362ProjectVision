@@ -6,6 +6,12 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	test: {
+		globals: true,
+		coverage: {
+			provider: 'v8',
+			reporter: ['text', 'html'],
+			exclude: ['src/lib/__tests__/**', '**/*.d.ts']
+		},
 		workspace: [
 			{
 				extends: './vite.config.ts',

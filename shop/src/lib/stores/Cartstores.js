@@ -48,3 +48,33 @@ cart.subscribe(async (cartItems) => {
         await setDoc(cartRef, { items: cartItems });
     }
 });
+
+
+/**
+ * @param {CartItem} product
+ */
+export function addToCart(product) {
+    cart.update(items => {
+      const existingItem = items.find(item => item.id === product.id);
+      if (existingItem) {
+        return items.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + product.quantity }
+            : item
+        );
+      } else {
+        return [...items, { ...product }];
+      }
+    });
+  }
+  
+  /**
+ * @param {number} productId
+ */
+  export function removeFromCart(productId) {
+    cart.update(items => items.filter(item => item.id !== productId));
+  }
+  
+  export function clearCart() {
+    cart.set([]);
+  }

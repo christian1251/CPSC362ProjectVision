@@ -82,7 +82,7 @@
 
 /* ---------- only the logo & badge tweaks are new ------------- */
 .logo{
-	height:56px;          /* adjust if you want it bigger/smaller   */
+	height:100px;          /* adjust if you want it bigger/smaller   */
 	width:auto;
 	object-fit:contain;
 	/* turn dark logo white so it pops on the green bar            */

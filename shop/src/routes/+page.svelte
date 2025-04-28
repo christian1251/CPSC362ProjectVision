@@ -11,6 +11,11 @@
 	);
 </script>
 
+<div class="home-wrapper">
+    <h1>Welcome to StyleSpot</h1>
+    <p class="subheading">Browse our current listings below </p>
+  </div>
+
 <div class="wrapper">
 	<input  class="search"
 	        placeholder="Search products…"
@@ -45,4 +50,26 @@
 		justify-items:center;
 	}
 	.no-results{grid-column:1/-1;text-align:center;color:#666;font-size:1.1rem;}
+
+	.home-wrapper {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      background-color: #f9fbfd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+	h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #1a202c;
+    }
+  
+    .subheading {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
 </style>
