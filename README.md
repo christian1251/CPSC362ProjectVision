@@ -2,7 +2,8 @@
 
 # Video
 ## https://youtu.be/UEX3rmVnNxQ
-
+## Doc: https://docs.google.com/document/d/1z9JnL5rlp2b4TqFHf24xwzBZRwOxxaWdH6wWwLpDMxc/edit?usp=sharing 
+## Presentation: https://docs.google.com/presentation/d/1SAcPD3F3Jpsc1Kl-I9GF1gDGfxSgUtfwRUYLD_D36Ek/edit?usp=sharing
 --- 
 ##  Fashion Website
 Title: StyleSpot
